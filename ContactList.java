@@ -59,11 +59,10 @@ public class ContactList {
     }
 
     public String[] fetchAllPhoneNumbers() {
-        ArrayList<String> temp=new ArrayList<>();
+        TreeSet<String> temp=new TreeSet<>();
         for (String name : nameList) {
             temp.addAll(contactList.get(name).getPhoneNumbers());
         }
-        temp.sort(Comparator.naturalOrder());
         return (String[])temp.toArray(new String[0]);
     }
 }
