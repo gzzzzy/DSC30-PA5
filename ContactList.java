@@ -35,7 +35,7 @@ public class ContactList {
         while(!selected.isEmpty()){
             re.add(selected.remove(selected.firstKey()));
         }
-        return re;
+        return (Person[])re.toArray(new Person[0]);
     }
 
     public boolean deleteContact(String name) {
