@@ -30,6 +30,8 @@ public class Person {
     public boolean deletePhoneNumber(String pn) {
         if (phoneNumberList.size() == 1)
             throw new IllegalArgumentException();
+        if(pn==null) 
+            return false;
         if (phoneNumberList.remove(pn)) {
             return true;
         } else {
