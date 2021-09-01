@@ -31,10 +31,9 @@ public class ContactList {
         if(start.compareTo(end)>=0)
         throw new IllegalArgumentException();
         SortedMap<String,Person> selected=contactList.subMap(start, end);
-        Person[] re=new Person[size()];
-        int i=0;
+        ArrayList<Person> re=new ArrayList<>(size());
         while(!selected.isEmpty()){
-            re[i++]=selected.remove(selected.firstKey());
+            re.add(selected.remove(selected.firstKey()));
         }
         return re;
     }
