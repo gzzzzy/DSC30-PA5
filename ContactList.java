@@ -38,7 +38,7 @@ public class ContactList {
                 re.add(contactList.get(name));
             }
         }
-        return (Person[])re.toArray();
+        return (Person[])re.toArray(new Person[0]);
     }
 
     public boolean deleteContact(String name) {
